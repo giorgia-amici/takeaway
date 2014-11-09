@@ -6,7 +6,7 @@ class Customer
 	def initialize(name, number)
 		@name = name
 		@phone_no = number.to_s
-		@order = []
+		@orders = []
 	end
 
 	def change_no(new_number)
@@ -14,17 +14,9 @@ class Customer
 	end
 
 	def choose_dish(menu, dish)
-		menu.each{ |plate| order << plate if plate == dish }
+		menu.each{ |plate| orders << plate if plate == dish }
 	end
 
-	def total_due
-
-	end
-
-	def paid?
-
-	end
 	
-
 
 end

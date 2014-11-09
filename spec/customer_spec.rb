@@ -20,16 +20,11 @@ it 'can cange the phone number in case provided the wrong one' do
 	expect(customer.phone_no).not_to be nil
 end
 
-it 'can select dishes from the menu' do
-	customer.choose_dish(menu,dish)
-	expect(customer.order).to be([dish])
-end
+# it 'can select dishes from the menu' do
+# 	customer.choose_dish(menu,dish)
+# 	expect(customer.order).to be([dish])
+# end
 
-it 'has an order that is a list of dishes with price'
-
-it 'can ask for the total bill'
-
-it 'has to pay a total'
 
 it 'receives order placed confirmation texts'
 
