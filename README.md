@@ -11,3 +11,9 @@ This is the second of the two weekend challenges at MA for the second weekend.
 - a class Message
 - a class Takeaway
 
+
+####Skills
+- [Rspec](https://github.com/rspec/rspec)
+- [Ruby Gems](https://rubygems.org)
+	- in particular [twilio-ruby 3.13.1](https://rubygems.org/gems/twilio-ruby)
+- [Twilio](https://www.twilio.com/)
