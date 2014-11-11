@@ -3,7 +3,7 @@ require 'customer'
 describe Customer do
 
 	let(:customer) { Customer.new(:name, :num) }
-	let(:menu) { double :menu }
+	let(:carte) { double :carte}
 	let(:dish) { double :dish }
 	
 it 'has a name' do
@@ -20,13 +20,25 @@ it 'can cange the phone number in case provided the wrong one' do
 	expect(customer.phone_no).not_to be nil
 end
 
-# it 'can select dishes from the menu' do
-# 	customer.choose_dish(menu,dish)
-# 	expect(customer.order).to be([dish])
-# end
+it 'can add dishes to the order' do
+	expect(customer.orders).not_to be nil
+	customer.add_dish(dish)
+	expect(customer.orders).to eq([dish])
+end
 
+it 'places an order' do
+customer.add_dish(dish)
+expect(customer.orders).to eq([dish])
+expect(customer.order_placed?).to be true
+end
 
-it 'receives order placed confirmation texts'
+it 'receives order placed confirmation texts' do
+customer.add_dish(dish)
+expect(customer.orders).to eq([dish])
+expect(customer.order_placed?).to be true
+
+end
+
 
 
 

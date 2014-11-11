@@ -1,7 +1,7 @@
 class Customer
 
 	attr_reader :name
-	attr_accessor :phone_no, :order
+	attr_accessor :phone_no, :orders
 
 	def initialize(name, number)
 		@name = name
@@ -13,8 +13,17 @@ class Customer
 		@phone_no = new_number.to_s
 	end
 
-	def choose_dish(menu, dish)
-		menu.each{ |plate| orders << plate if plate == dish }
+	def add_dish(dish)
+		@orders << dish
+	end
+
+	def order_placed?
+		!@orders.empty?
+	end
+
+
+	def confirmation_received?(message)
+		message.send_text if order.placed
 	end
 
 	
