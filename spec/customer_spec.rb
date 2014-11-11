@@ -37,13 +37,7 @@ it 'receives order placed confirmation texts' do
 customer.add_dish(dish)
 expect(customer.orders).to eq([dish])
 expect(customer.order_placed?).to be true
-customer.confirmation_received?(message)
-
-
+expect(customer.confirmation_received?(message)).to be true
 end
-
-
-
-
 	
 end
