@@ -5,6 +5,7 @@ describe Customer do
 	let(:customer) { Customer.new(:name, :num) }
 	let(:carte) { double :carte}
 	let(:dish) { double :dish }
+	let(:message) { double :message, :send_text => true  }
 	
 it 'has a name' do
 	expect(customer.name).not_to be nil
@@ -36,6 +37,8 @@ it 'receives order placed confirmation texts' do
 customer.add_dish(dish)
 expect(customer.orders).to eq([dish])
 expect(customer.order_placed?).to be true
+customer.confirmation_received?(message)
+
 
 end
 

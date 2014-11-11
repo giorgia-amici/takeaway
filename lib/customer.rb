@@ -21,9 +21,8 @@ class Customer
 		!@orders.empty?
 	end
 
-
 	def confirmation_received?(message)
-		message.send_text if order.placed
+		message.send_text if order_placed?
 	end
 
 	
