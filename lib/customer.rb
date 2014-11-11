@@ -25,6 +25,4 @@ class Customer
 		message.send_text if order_placed?
 	end
 
-	
-
 end
